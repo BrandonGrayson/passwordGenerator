@@ -24,36 +24,26 @@ function writePassword() {
 function generatePassword() {
 	// an array to store the password data the user selected
 	let allChoices = [];
+	// a variable to store the password data after the user selects the criteria
 	let newPassword = '';
 
+	// Ask the user how long they want their password to be
 	// after clicking the button they will be asked the length of their password?
 	let passwordLength = parseInt(prompt('What is Your Passwords length. Must be between 8-128 charactrers'));
+	// use that number to specify how long the users password should be
+	// proceed to asking user which other characters they want in their password
 
-	// create an if statement that handles if the password length comes back to be less than 8 characters long
-	if (passwordLength >= 8) {
-		// Ask the user do they want uppercase
-		let userUpper = confirm('do you want uppercase characters?');
-		// ask the user... special char / numbers
-
-		// if the user selects uppercase characters
-		if (useUpper === ture) {
-			// if the user selects to have uppercase characters in password
-			allChoices.concat(allUpper);
-		}
-		// if the user selects lower case characters add them to the allChoices array
-		if (useLower === true) {
-			allChoices.concat(allLower);
-		}
-		// Randomly generate the password here
-		for (let i = 1; i >= passwordLength; i++) {
-			// select a random value
-			let randomIndex = Math.floor(Math.random() * allChoices.length);
-
-			// the new password should be set to the randomindex of the allChoices array
-			newPassword += allChoices[randomIndex];
-		}
+	
+	// if the password length is less than 8 characters or greater than 128 characters than...
+	if (passwordLength < 8 || passwordLength > 128) {
+		// than we should alert an error message and return
+		alert('Error! length must be between 8 and 128 characters!');
+		return;
+		// else if the password length is greater than 8 characters and less than 128 characters
+		// proceed to the next question...
 	} else {
-		alert('Error length must be between 8 and 128 characters!');
+
+		
 		return newPassword;
 	}
 
