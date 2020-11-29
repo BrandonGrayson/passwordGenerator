@@ -3,10 +3,10 @@
 // they should be able to click the generate password button
 
 // We need 4 arrays to store possible password data
-let useUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+let allUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 let allLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-let useNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let useSpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+let allNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let allSpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 
 
 var generateBtn = document.querySelector('#generate');
@@ -55,20 +55,20 @@ function generatePassword() {
 
 		// set up an if statement to add user Picks to allchoices array options
 		if (useUpper === true) {
-			allChoices = allChoices.concat(useUpper)
+			allChoices = allChoices.concat(allUpper)
 			console.log(allChoices)
 		}
 		// if useLower = true add useLower to allchoices array
 		if (useLower === true) {
-			allChoices = allChoices.concat(useLower)
+			allChoices = allChoices.concat(allLower)
 		}
 		// if useNumbers = true add useNumbers to array choices
 		if (useNumbers === true) {
-			allChoices = allChoices.concat(useNumbers)
+			allChoices = allChoices.concat(allNumbers)
 		}
 		// if useSpecial = true add useSpecial to allChoices array
 		if (useSpecial === true) {
-			allChoices = allChoices.concat(useSpecial)
+			allChoices = allChoices.concat(allSpecial)
 		}
 
 		// generate a random password for the user
@@ -81,8 +81,10 @@ function generatePassword() {
 		}
 	} else {
 		alert('Error! Password Length must be betweeen 8-128 characters')
+		return ('Try Again!!!')
 	}
-
+	// Once password is generated display to user
+	return newPassword;
 }
 		
 	//	return newPassword;
