@@ -5,8 +5,8 @@
 // We need 4 arrays to store possible password data
 let useUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 let allLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-let allNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let allSpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+let useNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let useSpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 
 
 var generateBtn = document.querySelector('#generate');
@@ -30,7 +30,7 @@ function generatePassword() {
 	let newPassword = '';
 
 	// Ask the user how long they want their password to be
-	// after clicking the button they will be asked the length of their password?
+	// store response in passwordLength variable
 	let passwordLength = parseInt(prompt('What is Your Passwords length. Must be between 8-128 charactrers'));
 	// use that number to specify how long the users password should be
 	// proceed to asking user which other characters they want in their password
@@ -41,11 +41,17 @@ function generatePassword() {
 		console.log(passwordLength)
 
 		// check to see if the user would like to use uppercase characters
-		let useUpper = confirm('Would you like to use Uppercase characters')
-		console.log('useUpper')
-
-		
-
+		let useUpper = confirm('Would you like to use Uppercase characters?')
+		console.log(useUpper)
+		// check to see if the user would like to use lowercase characters
+		let useLower = confirm('Would you like to use lowercase characters?')
+		console.log(useLower)
+		// check to see if the user would like to use numbers
+		let useNumbers = confirm('Would you like to use Numbers?')
+		console.log(useNumbers)
+		// check to see if the user would like to use special characters
+		let useSpecial = confirm('Would you like to use Special Characters?')
+		console.log(useSpecial)
 	} 
 
 }
