@@ -52,6 +52,24 @@ function generatePassword() {
 		// check to see if the user would like to use special characters
 		let useSpecial = confirm('Would you like to use Special Characters?')
 		console.log(useSpecial)
+
+		// set up an if statement to add user Picks to allchoices array options
+		if (useUpper === true) {
+			allChoices = allChoices.concat(useUpper)
+			console.log(allChoices)
+		}
+		// if useLower = true add useLower to allchoices array
+		if (useLower === true) {
+			allChoices = allChoices.concat(useLower)
+		}
+		// if useNumbers = true add useNumbers to array choices
+		if (useNumbers === true) {
+			allChoices = allChoices.concat(useNumbers)
+		}
+		// if useSpecial = true add useSpecial to allChoices array
+		if (useSpecial === true) {
+			allChoices = allChoices.concat(useSpecial)
+		}
 	} 
 
 }
