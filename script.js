@@ -70,7 +70,18 @@ function generatePassword() {
 		if (useSpecial === true) {
 			allChoices = allChoices.concat(useSpecial)
 		}
-	} 
+
+		// generate a random password for the user
+		// we'll need to loop through our array based on the password length
+		// and select a random number based on the index of the array
+		for (let i = 0; i <= passwordLength; i++) {
+			let randomIndex = Math.floor(Math.random() * allChoices.length)
+			console.log(randomIndex)
+			newPassword += allChoices[randomIndex]
+		}
+	} else {
+		alert('Error! Password Length must be betweeen 8-128 characters')
+	}
 
 }
 		
