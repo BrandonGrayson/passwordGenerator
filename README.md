@@ -17,3 +17,15 @@ After selecting a length you will see options for uppercase characters, lowercas
 
 After the user selects which options they want in their password their password will generate like so
 
+<img width="1440" alt="Screen Shot 2020-11-29 at 8 39 05 PM" src="https://user-images.githubusercontent.com/64443434/100560239-366ab700-3283-11eb-8eff-218347bbd476.png">
+
+Now you have a randomly generated password! 
+
+### Credit
+Brandon Grayson
+
+#### Links
+
+
+
+
